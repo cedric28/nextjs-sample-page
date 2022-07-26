@@ -2,6 +2,7 @@
   "name": "next-js-sample-page",
   "version": "0.1.0",
   "private": true,
+  "author": "Cedric Nathan Legarda",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
