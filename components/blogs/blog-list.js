@@ -1,12 +1,12 @@
-import EventItem from "./event-item";
-import classes from "../../styles/events/event-list.module.css";
+import BlogItem from "./blog-item";
+import classes from "../../styles/blogs/blog-list.module.css";
 
-const EventList = (props) => {
+const BlogList = (props) => {
     const { items } = props;
     return (
         <ul className={classes.list}>
             {items.map(event =>( 
-                <EventItem 
+                <BlogItem 
                     key={event.title} 
                     {...event}
                 />
@@ -15,4 +15,4 @@ const EventList = (props) => {
     );
 }
 
-export default EventList;
+export default BlogList;

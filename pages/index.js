@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import EventList from "../components/events/event-list";
+import EventList from "../components/blogs/blog-list";
 
 const HomePage = (props) => {
   const [events, setEvents] = useState(props.events);

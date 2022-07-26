@@ -1,9 +1,9 @@
 import ArrowRightIcon from "../icons/arrow-right-icon";
 import Button from "../ui/button";
-import classes from "../../styles/events/event-item.module.css";
+import classes from "../../styles/blogs/blog-item.module.css";
 
-const EventItem = (props) => {
-    const {title, text_content, uri, media_content } = props;
+const BlogItem = (props) => {
+    const {title, text_content, uri } = props;
     const exploreLink = uri;
     return (
        <li className={classes.item}>
@@ -27,4 +27,4 @@ const EventItem = (props) => {
     );
 }
 
-export default EventItem;
+export default BlogItem;
