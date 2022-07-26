@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import EventList from "../components/blogs/blog-list";
+import BlogList from "../components/blogs/blog-list";
 
 const HomePage = (props) => {
   const [events, setEvents] = useState(props.events);
@@ -26,7 +26,7 @@ const HomePage = (props) => {
 
   return (
       <div>
-        <EventList items={events} />
+        <BlogList items={events} />
       </div>
   );
 }
