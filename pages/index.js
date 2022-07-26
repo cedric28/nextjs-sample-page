@@ -4,7 +4,7 @@ import useSWR from "swr";
 import BlogList from "../components/blogs/blog-list";
 
 const HomePage = (props) => {
-  const [events, setEvents] = useState(props.events);
+  const [blogs, setBlogs] = useState(props.blogs);
 
   const fetcher = url => fetch(url).then(r => r.json())
 
@@ -12,7 +12,7 @@ const HomePage = (props) => {
 
   useEffect(() => {
     if(data){
-      setEvents(data);
+      setBlogs(data);
     }
   },[data]);
   
@@ -20,13 +20,13 @@ const HomePage = (props) => {
     <p>Failed to load....</p>;
   }
 
-  if(!data && !events){
+  if(!data && !blogs){
       return <p>Loading...</p>;
   }
 
   return (
       <div>
-        <BlogList items={events} />
+        <BlogList items={blogs} />
       </div>
   );
 }
@@ -37,7 +37,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-        events: data
+        blogs: data
     }
   }
 }
